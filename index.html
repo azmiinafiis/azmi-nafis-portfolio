@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azmi Nafis | Data Analyst</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fb;
+      color: #18212f;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 100px 0 110px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e8efff;
+      color: #2563eb;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.15;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #2563eb;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #64748b;
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      background: #2563eb;
+      color: white;
+    }
+
+    .button.secondary {
+      background: white;
+      color: #18212f;
+      border: 1px solid #e2e8f0;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: #64748b;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border: 1px solid #e8edf3;
+      border-radius: 14px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #edf2f7;
+      padding: 8px 14px;
+      border-radius: 7px;
+      font-size: 14px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .tools {
+      margin-top: 18px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .experience {
+      margin-bottom: 16px;
+    }
+
+    .experience p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid #e2e8f0;
+      padding: 30px 0;
+      color: #64748b;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="container">
+    <nav>
+      <a href="#" class="logo">AN.</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="container hero">
+      <div class="tag">Data Analyst Portfolio</div>
+
+      <h1>
+        Turning Data Into
+        <span>Meaningful Insights.</span>
+      </h1>
+
+      <p>
+        Hi, I'm Azmi Nafis. A Statistics graduate
+        passionate about data analytics, business
+        intelligence, and solving real-world
+        business problems through data.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="button">
+          Explore Projects
+        </a>
+
+        <a href="#contact" class="button secondary">
+          Contact Me
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <h2 class="section-title">About Me</h2>
+
+      <p class="section-desc">
+        Statistics graduate from Universitas Padjadjaran
+        with an interest in data analytics and business
+        intelligence. I enjoy transforming raw data
+        into actionable insights that support
+        business decisions.
+      </p>
+
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <br>
+
+        <div class="skills">
+          <span class="skill">Microsoft Excel</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Power BI</span>
+          <span class="skill">Python</span>
+          <span class="skill">Google Sheets</span>
+          <span class="skill">R</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2 class="section-title">Selected Projects</h2>
+
+      <p class="section-desc">
+        A selection of my data analytics projects.
+      </p>
+
+      <div class="projects">
+
+        <div class="card project">
+          <h3>Live Stream Performance Dashboard</h3>
+
+          <p>
+            Developed a Google Sheets dashboard to
+            monitor live stream performance, including
+            GMV, sales trends, top products, and
+            campaign performance.
+          </p>
+
+          <div class="tools">
+            Google Sheets · Data Analytics
+          </div>
+        </div>
+
+        <div class="card project">
+          <h3>BRILink Mobile Sentiment Analysis</h3>
+
+          <p>
+            Analyzed customer sentiment using
+            IndoBERT to understand user feedback
+            and evaluate sentiment classification
+            performance.
+          </p>
+
+          <div class="tools">
+            Python · NLP · IndoBERT
+          </div>
+        </div>
+
+        <div class="card project">
+          <h3>Business Performance Dashboard</h3>
+
+          <p>
+            Built dashboards to monitor business
+            performance and help stakeholders
+            identify trends and opportunities.
+          </p>
+
+          <div class="tools">
+            Excel · Power BI
+          </div>
+        </div>
+
+        <div class="card project">
+          <h3>Data Similarity Search Engine</h3>
+
+          <p>
+            Developed a Python-based similarity
+            search system using TF-IDF and NLP
+            to match similar tariff data.
+          </p>
+
+          <div class="tools">
+            Python · NLP · TF-IDF
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="card">
+
+        <div class="experience">
+          <h3>Data Analytics</h3>
+          <p>Allianz · 2026</p>
+        </div>
+
+        <div class="experience">
+          <h3>Commercial Intern</h3>
+          <p>Paragon · 2026</p>
+        </div>
+
+        <div class="experience">
+          <h3>Micro Ecosystem Intern</h3>
+          <p>Bank Rakyat Indonesia · 2025</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2 class="section-title">Let's Connect</h2>
+
+      <p class="section-desc">
+        Interested in working together or discussing
+        data analytics? Feel free to reach out.
+      </p>
+
+      <div class="buttons">
+        <a href="mailto:EMAIL_KAMU" class="button">
+          Email Me
+        </a>
+
+        <a href="LINKEDIN_KAMU"
+           target="_blank"
+           class="button secondary">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Azmi Nafis · Data Analyst Portfolio
+  </footer>
+
+</body>
+</html>
