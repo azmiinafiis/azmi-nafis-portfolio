@@ -1,396 +1,340 @@
-
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Azmi Nafis | Data Analyst</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f9fb;
-      color: #18212f;
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 0;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #2563eb;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      font-size: 14px;
-    }
-
-    .hero {
-      padding: 100px 0 110px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e8efff;
-      color: #2563eb;
-      padding: 7px 14px;
-      border-radius: 30px;
-      font-size: 13px;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 6vw, 68px);
-      line-height: 1.15;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-
-    h1 span {
-      color: #2563eb;
-    }
-
-    .hero p {
-      max-width: 600px;
-      color: #64748b;
-      font-size: 17px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      padding: 12px 22px;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 14px;
-      background: #2563eb;
-      color: white;
-    }
-
-    .button.secondary {
-      background: white;
-      color: #18212f;
-      border: 1px solid #e2e8f0;
-    }
-
-    section {
-      padding: 70px 0;
-    }
-
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
-
-    .section-desc {
-      color: #64748b;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 28px;
-      border: 1px solid #e8edf3;
-      border-radius: 14px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background: #edf2f7;
-      padding: 8px 14px;
-      border-radius: 7px;
-      font-size: 14px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
-    }
-
-    .project p {
-      color: #64748b;
-      font-size: 14px;
-    }
-
-    .tools {
-      margin-top: 18px;
-      color: #2563eb;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .experience {
-      margin-bottom: 16px;
-    }
-
-    .experience p {
-      color: #64748b;
-      font-size: 14px;
-    }
-
-    footer {
-      border-top: 1px solid #e2e8f0;
-      padding: 30px 0;
-      color: #64748b;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    @media (max-width: 650px) {
-      .nav-links {
-        gap: 12px;
-        font-size: 12px;
-      }
-
-      .hero {
-        padding: 65px 0;
-      }
-
-      .projects {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 50px 0;
-      }
-
-      .card {
-        padding: 22px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- EDIT: SEO title and description -->
+<title>Azmi Nafis | Data Analyst</title>
+<meta name="description" content="Portfolio of Azmi Nafis, a Statistics graduate and Data Analyst focused on turning business data into clear, actionable insights.">
+<!-- EDIT: replace the emoji favicon with assets/images/favicon.png if you have one -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+<style>
+/* ===== COLORS: edit here. Dark mode values are in [data-theme="dark"] ===== */
+:root{
+  --bg:#F7F8FA; --card:#FFFFFF; --text:#172033; --muted:#64748B;
+  --accent:#2563EB; --accent-text:#2563EB; --border:#E2E8F0; --soft:#EEF3FE;
+}
+[data-theme="dark"]{
+  --bg:#0F172A; --card:#1E293B; --text:#E2E8F0; --muted:#A3B1C6;
+  --accent-text:#7DB0FF; --border:#334155; --soft:#1B2A4A;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:16px}
+a{color:var(--accent-text)}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,5vw,3.1rem)} h2{font-size:1.8rem} h3{font-size:1.1rem}
+p{margin:0 0 1em} ul{margin:0 0 1em;padding-left:1.2em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.sub{color:var(--muted);max-width:60ch}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;font:inherit;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--accent-text)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px}
+.grid{display:grid;gap:20px}
+.tag{display:inline-block;font-size:.8rem;padding:2px 10px;border-radius:99px;background:var(--soft);color:var(--accent-text);margin:0 6px 6px 0}
+.ph{background:#FEF3C7;color:#92400E;padding:0 4px;border-radius:3px}
+[data-theme="dark"] .ph{background:#422006;color:#FCD34D}
+/* Nav */
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--border)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:1.3rem;color:var(--text);text-decoration:none}
+.links{display:flex;gap:6px;align-items:center}
+.links a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:.95rem}
+.links a:hover,.links a.active{color:var(--accent-text);background:var(--soft)}
+.icon-btn{background:none;border:1px solid var(--border);color:var(--text);border-radius:8px;width:40px;height:40px;cursor:pointer;font-size:1.1rem}
+#menuBtn{display:none}
+@media(max-width:820px){
+  #menuBtn{display:inline-block}
+  .links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);flex-direction:column;align-items:stretch;padding:10px 20px}
+  .links.open{display:flex}
+}
+/* Hero */
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;padding-top:64px}
+.hero .role{color:var(--accent-text);font-weight:600;margin-bottom:8px}
+.portrait{aspect-ratio:1;max-width:340px;width:100%;border-radius:12px;border:1px solid var(--border);background:var(--soft);display:grid;place-items:center;overflow:hidden;color:var(--muted);text-align:center;margin-left:auto}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px}
+.soc{display:inline-grid;place-items:center;width:42px;height:42px;border:1px solid var(--border);border-radius:8px;color:var(--text)}
+.soc:hover{color:var(--accent-text);border-color:var(--accent)}
+.soc svg{width:20px;height:20px;fill:currentColor}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.portrait{margin:0;max-width:240px}}
+/* About / skills */
+.two{grid-template-columns:1.3fr 1fr}
+.three{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+/* Projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 24px}
+.filters button{font:inherit;padding:6px 14px;border-radius:99px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.proj{display:flex;flex-direction:column;padding:0;overflow:hidden}
+.thumb{aspect-ratio:16/9;background:var(--soft);display:grid;place-items:center;color:var(--muted);font-size:.9rem;text-align:center;padding:10px}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.proj .body{padding:20px;display:flex;flex-direction:column;flex:1}
+.proj .btn{margin-top:auto;align-self:flex-start}
+.proj dl{margin:0 0 1em;font-size:.93rem}.proj dt{font-weight:600}.proj dd{margin:0 0 .5em;color:var(--muted)}
+/* Timeline */
+.tl{border-left:2px solid var(--border);padding-left:24px;display:grid;gap:20px}
+.tl .card{position:relative}
+.tl .card::before{content:"";position:absolute;left:-33px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.meta{color:var(--muted);font-size:.93rem;margin-bottom:.8em}
+/* Dialog */
+dialog{border:1px solid var(--border);border-radius:12px;background:var(--card);color:var(--text);max-width:760px;width:calc(100% - 32px);max-height:88vh;padding:28px}
+dialog::backdrop{background:rgba(15,23,42,.6)}
+dialog h4{margin:1.4em 0 .3em;font-size:1rem}
+dialog .close{float:right}
+footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.93rem}
+/* Reveal (subtle) */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+</style>
 </head>
-
 <body>
+<header><div class="wrap"><nav aria-label="Main">
+  <a class="logo" href="#top" aria-label="Azmi Nafis, home">AN.</a>
+  <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="links">☰</button>
+  <div class="links" id="links">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+    <a href="#experience">Experience</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch to dark mode">🌙</button>
+  </div>
+</nav></div></header>
 
-  <header class="container">
-    <nav>
-      <a href="#" class="logo">AN.</a>
+<main id="top">
+<!-- ===== HERO ===== -->
+<div class="wrap hero">
+  <div>
+    <p class="role">Azmi Nafis · Data Analyst</p>
+    <h1>Turning Data Into Meaningful Business Insights.</h1>
+    <p class="sub">Statistics graduate from Universitas Padjadjaran with hands-on experience in business and operational data. I turn data into analysis that supports clear business decisions.</p>
+    <div class="row">
+      <!-- EDIT: put your CV at assets/cv.pdf -->
+      <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener">View My CV</a>
+      <a class="btn ghost" href="#projects">Explore Projects</a>
+      <a class="soc" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a>
+      <a class="soc" href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.200-1.200 3.200-1.200.6 1.600.2 2.800.1 3.100.8.8 1.200 1.800 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.400.8 1.100.8 2.200v3.200c0 .3.2.7.8.6A11.500 11.500 0 0 0 12 .5z"/></svg></a>
+    </div>
+  </div>
+  <div class="portrait" id="portrait">
+    <!-- EDIT: add assets/images/portrait.jpg. Shows a placeholder if the image is missing. -->
+    <img src="assets/images/portrait.jpg" alt="Portrait of Azmi Nafis" onerror="this.remove()">
+    <span>Portrait<br>(assets/images/portrait.jpg)</span>
+  </div>
+</div>
 
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+<!-- ===== ABOUT ===== -->
+<section id="about"><div class="wrap reveal">
+  <h2>About me</h2>
+  <div class="grid two">
+    <div>
+      <p>I am a Statistics graduate with an interest in data analytics and business intelligence. I have worked with business and operational data, and I enjoy solving business problems through careful analysis and clear communication.</p>
+      <!-- EDIT: add one or two sentences about your working style if you like -->
+    </div>
+    <div class="card">
+      <h3>Education</h3>
+      <p><strong>Universitas Padjadjaran</strong><br>Bachelor of Statistics</p>
+      <ul><li>GPA: 3.52 / 4.00</li><li>Graduated in 3.5 years</li><li>Cum Laude</li></ul>
+    </div>
+  </div>
+</div></section>
 
-  <main>
+<!-- ===== SKILLS ===== -->
+<section id="skills"><div class="wrap reveal">
+  <h2>Skills and tools</h2>
+  <div class="grid three" id="skillGrid"></div>
+</div></section>
 
-    <section class="container hero">
-      <div class="tag">Data Analyst Portfolio</div>
+<!-- ===== PROJECTS ===== -->
+<section id="projects"><div class="wrap">
+  <h2>Featured projects</h2>
+  <p class="sub">Select a project to open its case study. Highlighted text marks details I still need to add.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filter projects by category"></div>
+  <div class="grid three" id="projGrid"></div>
+</div></section>
 
-      <h1>
-        Turning Data Into
-        <span>Meaningful Insights.</span>
-      </h1>
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience"><div class="wrap reveal">
+  <h2>Experience</h2>
+  <div class="tl" id="expList"></div>
+</div></section>
 
-      <p>
-        Hi, I'm Azmi Nafis. A Statistics graduate
-        passionate about data analytics, business
-        intelligence, and solving real-world
-        business problems through data.
-      </p>
+<!-- ===== ACHIEVEMENTS ===== -->
+<section id="achievements"><div class="wrap reveal">
+  <h2>Achievements and organizations</h2>
+  <div class="grid three">
+    <div class="card"><h3>Cum Laude graduate</h3><p class="meta">Universitas Padjadjaran</p><p>Bachelor of Statistics, GPA 3.52 / 4.00.</p></div>
+    <div class="card"><h3>Putra HIMASTA / Putra Favourite MIPA</h3><p class="meta"><span class="ph">[Year]</span></p><p>Title awarded within the Statistics student community.</p></div>
+    <div class="card"><h3>Vice President, FUSI HIMASTA</h3><p class="meta"><span class="ph">[Period]</span></p><p>Organizational leadership role. <span class="ph">[Add one line on your responsibilities]</span></p></div>
+  </div>
+</div></section>
 
-      <div class="buttons">
-        <a href="#projects" class="button">
-          Explore Projects
-        </a>
+<!-- ===== CONTACT ===== -->
+<section id="contact"><div class="wrap reveal">
+  <h2>Contact</h2>
+  <p class="sub">Open to Data Analyst opportunities. The fastest way to reach me is email.</p>
+  <div class="row">
+    <!-- EDIT: email, LinkedIn, GitHub -->
+    <a class="btn" href="mailto:YOUR-EMAIL@gmail.com?subject=Hello%20Azmi">Gmail</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn ghost" href="assets/cv.pdf" download>Download CV</a>
+  </div>
+  <!-- Contact form omitted on purpose: add one only after you set up a service (e.g. Formspree). See README. -->
+</div></section>
+</main>
 
-        <a href="#contact" class="button secondary">
-          Contact Me
-        </a>
-      </div>
-    </section>
+<footer><div class="wrap">© <span id="year"></span> Azmi Nafis. All rights reserved.</div></footer>
 
-    <section id="about" class="container">
-      <h2 class="section-title">About Me</h2>
+<dialog id="caseDlg" aria-labelledby="caseTitle"></dialog>
 
-      <p class="section-desc">
-        Statistics graduate from Universitas Padjadjaran
-        with an interest in data analytics and business
-        intelligence. I enjoy transforming raw data
-        into actionable insights that support
-        business decisions.
-      </p>
+<script>
+/* ===== HELPER: yellow placeholder text. Use PH("what to add") when data is missing ===== */
+const PH = t => `<span class="ph">[${t}]</span>`;
 
-      <div class="card">
-        <h3>Technical Skills</h3>
-        <br>
+/* ===== SKILLS: edit names or categories here ===== */
+const SKILLS = {
+  "Data Analysis": ["Microsoft Excel", "Google Sheets", "SPSS", "R"],
+  "Data Visualization": ["Power BI", "Google Sheets dashboards"],
+  "Programming": ["SQL / MySQL", "Python", "R"],
+  "Business Intelligence": ["Power BI", "Excel reporting"]
+};
 
-        <div class="skills">
-          <span class="skill">Microsoft Excel</span>
-          <span class="skill">SQL</span>
-          <span class="skill">Power BI</span>
-          <span class="skill">Python</span>
-          <span class="skill">Google Sheets</span>
-          <span class="skill">R</span>
-        </div>
-      </div>
-    </section>
+/* ===== PROJECTS: to add a project, copy one block, change the values, and save.
+   Leave a field out (or as "") to show a placeholder.
+   category must be one of: "Dashboard", "NLP", "Python" (or add your own). ===== */
+const PROJECTS = [
+  { id:"livestream", title:"Live Stream Performance Dashboard", category:"Dashboard",
+    image:"assets/images/project-livestream.png",
+    summary:"Dashboard to monitor live stream commercial performance.",
+    problem:"Commercial teams needed one view of live stream performance and campaigns.",
+    tools:["Google Sheets"],
+    results:["Tracks GMV and performance trends","Shows top products","Supports campaign monitoring"],
+    link:"", linkLabel:"View dashboard",
+    detail:{ overview:"Built during my Commercial internship at Paragon.", objectives:["Monitor GMV and performance trends","Identify top products","Monitor campaigns"],
+      data:"", cleaning:"", method:"Google Sheets", visual:"", findings:"", recommendations:"", limitations:"" } },
+  { id:"brilink", title:"BRILink Mobile Sentiment Analysis", category:"NLP",
+    image:"assets/images/project-brilink.png",
+    summary:"Sentiment analysis of Google Play Store reviews using NLP.",
+    problem:"Customer reviews are hard to read at scale to understand user sentiment.",
+    tools:["Python","NLP","IndoBERT"],
+    results:[], /* Add accuracy / F1 only after you verify them in your thesis */
+    link:"", linkLabel:"View on GitHub",
+    detail:{ overview:"Analyzes customer sentiment from Google Play Store reviews of the BRILink Mobile app.", objectives:[],
+      data:"Google Play Store reviews. Add collection date and size.", cleaning:"", method:"Python, NLP, IndoBERT", visual:"", findings:"", recommendations:"", limitations:"" } },
+  { id:"bizperf", title:"Business Performance Dashboard", category:"Dashboard",
+    image:"assets/images/project-business.png",
+    summary:"Dashboard for business performance monitoring and operational insights.",
+    problem:"", tools:[], results:[],
+    link:"", linkLabel:"View dashboard",
+    detail:{ overview:"", objectives:[], data:"", cleaning:"", method:"", visual:"", findings:"", recommendations:"", limitations:"" } },
+  { id:"similarity", title:"Data Similarity Search Engine", category:"Python",
+    image:"assets/images/project-similarity.png",
+    summary:"Matches similar tariff data using text similarity.",
+    problem:"New tariff descriptions needed to be matched against existing data.",
+    tools:["Python","TF-IDF"],
+    results:[],
+    link:"", linkLabel:"View on GitHub",
+    detail:{ overview:"Built from my Data Analytics experience at Allianz.", objectives:["Find similar tariff data"],
+      data:"", cleaning:"", method:"Python, TF-IDF", visual:"", findings:"", recommendations:"", limitations:"" } }
+];
 
-    <section id="projects" class="container">
-      <h2 class="section-title">Selected Projects</h2>
+/* ===== EXPERIENCE: edit dates and details ===== */
+const EXPERIENCE = [
+  { role:"Data Analytics", company:"Allianz", period:"", desc:"Data analytics work on hospital billing and tariff data.",
+    points:["Check hospital billing against agreed tariffs","Built a Python and TF-IDF tool to match similar tariff data"], tools:["Excel VBA","Python","TF-IDF"] },
+  { role:"Commercial Intern", company:"Paragon", period:"", desc:"Commercial Directorate internship.",
+    points:["Worked across Streamverse, Affiliate, and Teens & Emerging segments","Built the Live Stream Performance Dashboard"], tools:["Google Sheets"] },
+  { role:"Micro Ecosystem Intern", company:"Bank Rakyat Indonesia", period:"", desc:"",
+    points:[], tools:[] }
+];
 
-      <p class="section-desc">
-        A selection of my data analytics projects.
-      </p>
+/* ===== RENDERING (you rarely need to edit below this line) ===== */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tags = a => a.length ? a.map(t => `<span class="tag">${esc(t)}</span>`).join("") : PH("Add tools");
+const list = a => a.length ? `<ul>${a.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : PH("Add details");
+const txt = (v, label) => v ? `<p>${esc(v)}</p>` : `<p>${PH(label)}</p>`;
 
-      <div class="projects">
+$("#year").textContent = new Date().getFullYear();
 
-        <div class="card project">
-          <h3>Live Stream Performance Dashboard</h3>
+$("#skillGrid").innerHTML = Object.entries(SKILLS).map(([cat, items]) =>
+  `<div class="card"><h3>${esc(cat)}</h3>${items.map(i => `<span class="tag">${esc(i)}</span>`).join("")}</div>`).join("");
 
-          <p>
-            Developed a Google Sheets dashboard to
-            monitor live stream performance, including
-            GMV, sales trends, top products, and
-            campaign performance.
-          </p>
+$("#expList").innerHTML = EXPERIENCE.map(e => `<article class="card">
+  <h3>${esc(e.role)} · ${esc(e.company)}</h3>
+  <p class="meta">${e.period ? esc(e.period) : PH("Add dates")}</p>
+  ${e.desc ? `<p>${esc(e.desc)}</p>` : `<p>${PH("Add short description")}</p>`}
+  ${list(e.points)}<div>${tags(e.tools)}</div></article>`).join("");
 
-          <div class="tools">
-            Google Sheets · Data Analytics
-          </div>
-        </div>
+/* Projects + filtering */
+const cats = ["All", ...new Set(PROJECTS.map(p => p.category))];
+$("#filters").innerHTML = cats.map((c, i) => `<button type="button" data-cat="${esc(c)}" aria-pressed="${i === 0}">${esc(c)}</button>`).join("");
+function renderProjects(cat) {
+  $("#projGrid").innerHTML = PROJECTS.filter(p => cat === "All" || p.category === cat).map(p => `<article class="card proj">
+    <div class="thumb"><img src="${esc(p.image)}" alt="Screenshot of ${esc(p.title)}" loading="lazy" onerror="this.replaceWith(document.createTextNode('Screenshot placeholder'))"></div>
+    <div class="body"><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p>
+    <dl><dt>Business problem</dt><dd>${p.problem ? esc(p.problem) : PH("Add business problem")}</dd>
+    <dt>Key results</dt><dd>${p.results.length ? esc(p.results.join("; ")) : PH("Add verified results")}</dd></dl>
+    <div>${tags(p.tools)}</div>
+    <button class="btn" type="button" data-open="${p.id}">View Project</button></div></article>`).join("");
+}
+renderProjects("All");
+$("#filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  document.querySelectorAll("#filters button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  renderProjects(b.dataset.cat);
+});
 
-        <div class="card project">
-          <h3>BRILink Mobile Sentiment Analysis</h3>
+/* Case study dialog (reusable template: it is built from the PROJECTS data) */
+const dlg = $("#caseDlg");
+$("#projGrid").addEventListener("click", e => {
+  const b = e.target.closest("[data-open]"); if (!b) return;
+  const p = PROJECTS.find(x => x.id === b.dataset.open), d = p.detail;
+  dlg.innerHTML = `<button class="btn ghost close" type="button" id="closeDlg">Close</button>
+    <h2 id="caseTitle">${esc(p.title)}</h2><div>${tags(p.tools)}</div>
+    <h4>1. Project overview</h4>${txt(d.overview, "Add overview")}
+    <h4>2. Business problem</h4>${txt(p.problem, "Add business problem")}
+    <h4>3. Objectives</h4>${list(d.objectives)}
+    <h4>4. Dataset and data source</h4>${txt(d.data, "Add dataset and source")}
+    <h4>5. Data cleaning and preprocessing</h4>${txt(d.cleaning, "Add cleaning steps")}
+    <h4>6. Methodology and tools</h4>${txt(d.method, "Add methodology")}
+    <h4>7. Dashboard or visualization</h4>${txt(d.visual, "Add screenshot or description")}
+    <h4>8. Key findings</h4>${list(p.results)}${d.findings ? txt(d.findings, "") : ""}
+    <h4>9. Business recommendations</h4>${txt(d.recommendations, "Add recommendations")}
+    <h4>10. Project limitations</h4>${txt(d.limitations, "Add limitations")}
+    <h4>11. Links</h4>${p.link ? `<a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.linkLabel)}</a>` : `<p>${PH("Add GitHub or dashboard link")}</p>`}`;
+  dlg.showModal();
+});
+dlg.addEventListener("click", e => { if (e.target === dlg || e.target.id === "closeDlg") dlg.close(); });
 
-          <p>
-            Analyzed customer sentiment using
-            IndoBERT to understand user feedback
-            and evaluate sentiment classification
-            performance.
-          </p>
+/* Mobile menu */
+const menu = $("#links"), menuBtn = $("#menuBtn");
+menuBtn.addEventListener("click", () => menuBtn.setAttribute("aria-expanded", menu.classList.toggle("open")));
+menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); } });
 
-          <div class="tools">
-            Python · NLP · IndoBERT
-          </div>
-        </div>
+/* Theme toggle (remembers choice) */
+const themeBtn = $("#themeBtn");
+function setTheme(t) {
+  document.documentElement.dataset.theme = t;
+  themeBtn.textContent = t === "dark" ? "☀️" : "🌙";
+  themeBtn.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
+  try { localStorage.setItem("theme", t); } catch (e) {}
+}
+let saved = null; try { saved = localStorage.getItem("theme"); } catch (e) {}
+setTheme(saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+themeBtn.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
 
-        <div class="card project">
-          <h3>Business Performance Dashboard</h3>
-
-          <p>
-            Built dashboards to monitor business
-            performance and help stakeholders
-            identify trends and opportunities.
-          </p>
-
-          <div class="tools">
-            Excel · Power BI
-          </div>
-        </div>
-
-        <div class="card project">
-          <h3>Data Similarity Search Engine</h3>
-
-          <p>
-            Developed a Python-based similarity
-            search system using TF-IDF and NLP
-            to match similar tariff data.
-          </p>
-
-          <div class="tools">
-            Python · NLP · TF-IDF
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="container">
-      <h2 class="section-title">Experience</h2>
-
-      <div class="card">
-
-        <div class="experience">
-          <h3>Data Analytics</h3>
-          <p>Allianz · 2026</p>
-        </div>
-
-        <div class="experience">
-          <h3>Commercial Intern</h3>
-          <p>Paragon · 2026</p>
-        </div>
-
-        <div class="experience">
-          <h3>Micro Ecosystem Intern</h3>
-          <p>Bank Rakyat Indonesia · 2025</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="contact" class="container">
-      <h2 class="section-title">Let's Connect</h2>
-
-      <p class="section-desc">
-        Interested in working together or discussing
-        data analytics? Feel free to reach out.
-      </p>
-
-      <div class="buttons">
-        <a href="mailto:EMAIL_KAMU" class="button">
-          Email Me
-        </a>
-
-        <a href="LINKEDIN_KAMU"
-           target="_blank"
-           class="button secondary">
-          LinkedIn
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    © 2026 Azmi Nafis · Data Analyst Portfolio
-  </footer>
-
+/* Scroll reveal + active nav link */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+const navLinks = [...document.querySelectorAll(".links a")];
+const spy = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
+}), { rootMargin: "-40% 0px -55% 0px" });
+document.querySelectorAll("main section").forEach(s => spy.observe(s));
+</script>
 </body>
 </html>
